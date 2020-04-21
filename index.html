@@ -1,0 +1,52 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Ankavel Website</title>
+  <link rel="stylesheet" href="frontend/libraries/bootstrap/css/bootstrap.css">
+</head>
+<body>
+  <div class="container">
+    <nav class="row navbar navbar-expand-lg navbar-light bg-white">
+      <a href="#" class="navbar-brand">
+        <img src="frontend/images/logo/logo_ankavel.png" alt="Logo ANKAVEL">
+      </a>
+      <button class="navbar-toggler navbar-toggler-right" type="button" data-dismiss="collapse" data-target="#navb">
+        <span class="navbar-toggle-icon"></span>
+      </button>
+      <collapse class="navbar-collapse" id="navb">
+        <ul class="navbar-nav ml-auto mr-3">
+          <li class="nav-item mx-md-2">
+            <a href="#" class="nav-link active">Home</a>
+          </li>
+          <li class="nav-item mx-md-2">
+            <a href="#" class="nav-link">Package</a>
+          </li>
+          <li class="nav-item dropdown">
+            <a href="#" class="nav-link dropdown-toggle" id="navbdrop" data-toggle="dropdown">Services</a>
+            <div class="dropdown-menu">
+              <a href="#" class="dropdown-item">VISA</a>
+              <a href="#" class="dropdown-item">Passport</a>
+            </div>
+          </li>
+          <li class="nav-item mx-md-2">
+            <a href="#" class="nav-link">Testimonial</a>
+          </li>
+          <!-- Mobile Button -->
+          <form class="form-inline d-sm-block d-md-none">
+            <button class="btn btn-login my-2 my-sm-0">Sign in</button>
+          </form>
+          <!-- Desktop Button -->
+          <form class="form-inline my-2 my-lg-0 d-none d-md-block">
+            <button class="btn btn-login btn-navbar-right my-2 my-sm-0 px-4">Sign in</button>
+          </form>
+        </ul>
+      </collapse>
+    </nav>
+  </div>
+  <script src="frontend/libraries/jquery/jquery-3.5.0.min.js"></script>
+  <script src="frontend/libraries/bootstrap/js/bootstrap.js"></script>
+</body>
+</html>
+
