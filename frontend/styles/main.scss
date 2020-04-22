@@ -1,5 +1,124 @@
+body {
+  background-color: #FFFFFF;
+  font-family: 'Muli', sans-serif;
+  color: #041E44;
+}
+
+// navbar
 .navbar-brand {
   img {
     max-height: 40px;
+  }
+}
+
+.navbar-light {
+  .navbar-nav {
+    .nav-link {
+      color: #041E44;
+
+      &.active {
+        font-weight: bold;
+        color: #041E44 !important;
+      }
+    }
+  }
+}
+
+.btn-login {
+  background-color: #041E44;
+  color: #FFFFFF;
+
+  &:hover {
+    background-color: #01327A;
+    color: #FFFFFF;
+  }
+}
+
+.btn-navbar-right {
+  margin-top: -10px !important;
+  margin-bottom: -8px !important;
+  margin-right: -18px !important;
+  height: 70px;
+  border-radius: 0;
+}
+
+//header
+header {
+  padding: 160px 0 125px;
+  margin-top: -70px;
+  background-image: url('../images/banner/banner.png');
+  background-size: cover;
+
+  h1, p {
+    color: #F3F8FE;
+  }
+
+  h1 {
+    font-family: 'Playfair Display',
+    serif;
+    font-weight: bold;
+  }
+
+  p {
+    font-size: 22px;
+  }
+
+  .btn-get-started {
+    background-color: #F1A000;
+    color: #F3F8FE;
+    font-weight: bold;
+
+    &:hover {
+      background-color: #F2A816;
+      color: #F3F8FE;
+      font-weight: bold;
+    }
+  }
+}
+
+// statistic
+.section-stats{
+  margin-top: -50px;
+
+  .stats-detail {
+    padding-top: 18px;
+    background-color: #FFFFFF;
+
+    h2 {
+      font-size: 30px;
+      margin-bottom: 0;
+    }
+
+    p {
+      font-size: 20px;
+      font-weight: lighter;
+    }
+  }  
+}
+
+// popular
+.section-popular {
+  min-height: 470px;
+  background-color: #001636;
+  margin-top: -50px;
+  margin-bottom: -230px;
+
+  .section-popular-heading {
+    margin-top: 150px;
+
+    h2, p {
+      color: #F3F8FE;
+    }
+
+    h2 {
+      font-family: 'Playfair Display',
+      serif;
+      font-weight: bold;
+      font-size: 32px;
+    }
+
+    p {
+      font-size: 22px;
+    }
   }
 }

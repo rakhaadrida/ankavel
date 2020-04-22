@@ -3,19 +3,25 @@
 <head>
   <meta charset="UTF-8">
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
-  <title>Ankavel Website</title>
+  <title>Ankavel</title>
   <link rel="stylesheet" href="frontend/libraries/bootstrap/css/bootstrap.css">
+  <link
+    href="https://fonts.googleapis.com/css?family=Muli:300,400,500,600,700|Playfair+Display:400,500,600,700&display=swap"
+    rel="stylesheet">
+  <link rel="stylesheet" href="frontend/styles/main.css">
 </head>
 <body>
+  <!-- navbar  -->
   <div class="container">
     <nav class="row navbar navbar-expand-lg navbar-light bg-white">
       <a href="#" class="navbar-brand">
         <img src="frontend/images/logo/logo_ankavel.png" alt="Logo ANKAVEL">
       </a>
-      <button class="navbar-toggler navbar-toggler-right" type="button" data-dismiss="collapse" data-target="#navb">
-        <span class="navbar-toggle-icon"></span>
+      <button class="navbar-toggler navbar-toggler-right" type="button" data-toggle="collapse" data-target="#navb">
+        <span class="navbar-toggler-icon"></span>
       </button>
-      <collapse class="navbar-collapse" id="navb">
+
+      <div class="collapse navbar-collapse" id="navb">
         <ul class="navbar-nav ml-auto mr-3">
           <li class="nav-item mx-md-2">
             <a href="#" class="nav-link active">Home</a>
@@ -33,20 +39,78 @@
           <li class="nav-item mx-md-2">
             <a href="#" class="nav-link">Testimonial</a>
           </li>
-          <!-- Mobile Button -->
-          <form class="form-inline d-sm-block d-md-none">
-            <button class="btn btn-login my-2 my-sm-0">Sign in</button>
-          </form>
-          <!-- Desktop Button -->
-          <form class="form-inline my-2 my-lg-0 d-none d-md-block">
-            <button class="btn btn-login btn-navbar-right my-2 my-sm-0 px-4">Sign in</button>
-          </form>
         </ul>
-      </collapse>
+        <!-- Mobile Button -->
+        <form class="form-inline d-sm-block d-md-none">
+          <button class="btn btn-login my-2 my-sm-0">Sign in</button>
+        </form>
+        <!-- Desktop Button -->
+        <form class="form-inline my-2 my-lg-0 d-none d-md-block">
+          <button class="btn btn-login btn-navbar-right my-2 my-sm-0 px-4">Sign in</button>
+        </form>
+      </div>
     </nav>
   </div>
+
+  <!-- header  -->
+  <header class="text-center">
+    <h1>
+      EXPLORE THE WORLD
+      <br>
+      AS EASY ONE CLICK
+    </h1>
+    <p>
+      You will see beautiful moment
+      <br>
+      you never seen before
+    </p>
+    <a href="#" class="btn btn-get-started px-4 mt-4">Get Started</a>
+  </header>
+
+  <!-- main content  -->
+  <main>
+    <!-- stats  -->
+    <div class="container">
+      <section class="section-stats row justify-content-center">
+        <div class="col-3 col-md-2 stats-detail text-center">
+          <h2>20K</h2>
+          <p>Members</p>
+        </div>
+        <div class="col-3 col-md-2 stats-detail text-center">
+          <h2>15</h2>
+          <p>Countries</p>
+        </div>
+        <div class="col-3 col-md-2 stats-detail text-center">
+          <h2>300</h2>
+          <p>Destination</p>
+        </div>
+        <div class="col-3 col-md-2 stats-detail text-center">
+          <h2>2K</h2>
+          <p>Hotels</p>
+        </div>
+        <div class="col-3 col-md-2 stats-detail text-center">
+          <h2>29</h2>
+          <p>Partners</p>
+        </div>
+      </section>
+    </div>
+
+    <!-- popular  -->
+    <section class="section-popular" id="popular">
+      <div class="container">
+        <div class="row">
+          <div class="col text-center section-popular-heading">
+            <h2>Popular Destination</h2>
+            <p>Something you never tried before</p>
+          </div>
+        </div>
+      </div>
+    </section>
+  </main>
+
   <script src="frontend/libraries/jquery/jquery-3.5.0.min.js"></script>
   <script src="frontend/libraries/bootstrap/js/bootstrap.js"></script>
+  <script src="frontend/libraries/retina/retina.min.js"></script>
 </body>
 </html>
 
