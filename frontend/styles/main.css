@@ -284,6 +284,12 @@ header .btn-get-started:hover {
   color: #7A7E84;
 }
 
+.section-details-content .card-details h3 {
+  font-weight: normal;
+  font-size: 16px;
+  color: #041e44;
+}
+
 .section-details-content .card-details .trip-information th {
   font-weight: 400;
   font-size: 16px;
@@ -296,10 +302,48 @@ header .btn-get-started:hover {
   color: #7A7E84;
 }
 
-.section-details-content .card-details h3 {
-  font-weight: normal;
+.section-details-content .card-details .trip-information .text-blue {
+  color: #041E44;
+  font-weight: bold;
+}
+
+.section-details-content .card-details .trip-information .text-orange {
+  color: #F1A000;
+  font-weight: bold;
+}
+
+.section-details-content .card-details .payment-instructions {
+  font-weight: 300;
+  font-size: 14px;
+  color: #7A7E84;
+}
+
+.section-details-content .card-details .bank .bank-item h3 {
+  font-size: 16px;
+  color: #7A7E84;
+  margin-bottom: 0;
+}
+
+.section-details-content .card-details .bank .bank-item p {
+  margin-bottom: 0;
+}
+
+.section-details-content .card-details .bank .bank-item .description {
+  margin-left: 20px;
+  overflow: hidden;
+  float: left;
+}
+
+.section-details-content .card-details .bank .bank-item .description p {
+  font-weight: bold;
   font-size: 16px;
   color: #041e44;
+}
+
+.section-details-content .card-details .bank .bank-image {
+  width: 50px;
+  height: 50px;
+  float: left;
 }
 
 .section-details-content .card-details .disclaimer {
