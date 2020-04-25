@@ -442,4 +442,31 @@ header .btn-get-started:hover {
   width: 40px;
   height: 40px;
 }
+
+.section-success {
+  height: 90vh;
+}
+
+.section-success h1 {
+  font-weight: 600;
+  font-size: 26px;
+  color: #041e44;
+}
+
+.section-success p {
+  font-weight: 400;
+  font-size: 18px;
+  color: #AAABAE;
+}
+
+.section-success .btn-home-page {
+  background-color: #041e44;
+  color: #F5F8FE;
+  font-weight: bold;
+}
+
+.section-success .btn-home-page:hover {
+  background-color: #05285B;
+  color: #F5F8FC;
+}
 /*# sourceMappingURL=main.css.map */
