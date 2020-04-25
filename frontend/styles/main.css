@@ -285,7 +285,7 @@ header .btn-get-started:hover {
 }
 
 .section-details-content .card-details .trip-information th {
-  font-weight: 350;
+  font-weight: 400;
   font-size: 16px;
   color: #041E44;
 }
@@ -308,12 +308,14 @@ header .btn-get-started:hover {
   color: #AFB4BC;
 }
 
-.section-details-content .card-details .gj.datepicker .datepicker {
+.section-details-content .card-details .gj-datepicker .datepicker {
   border-right: 0;
+  width: 150px;
 }
 
-.section-details-content .card-details .gj.datepicker .input-group-append .btn {
+.section-details-content .card-details .gj-datepicker .input-group-append .btn {
   padding-right: 30px;
+  padding-bottom: 5px;
 }
 
 .section-details-content .card-details .btn-add-now {
