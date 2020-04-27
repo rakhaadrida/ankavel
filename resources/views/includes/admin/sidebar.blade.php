@@ -20,6 +20,11 @@
       <i class="fas fa-fw fa-plane"></i>
       <span>Travel Packages</span></a>
   </li>
+  <li class="nav-item active">
+    <a class="nav-link" href="{{ route('gallery.index') }}">
+      <i class="fas fa-fw fa-images"></i>
+      <span>Gallery Travel</span></a>
+  </li>
 
   <!-- Divider -->
   <hr class="sidebar-divider d-none d-md-block">
