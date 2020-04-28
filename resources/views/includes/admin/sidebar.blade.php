@@ -25,6 +25,11 @@
       <i class="fas fa-fw fa-images"></i>
       <span>Gallery Travel</span></a>
   </li>
+  <li class="nav-item active">
+    <a class="nav-link" href="{{ route('transaction.index') }}">
+      <i class="fas fa-fw fa-dollar-sign"></i>
+      <span>Transaction</span></a>
+  </li>
 
   <!-- Divider -->
   <hr class="sidebar-divider d-none d-md-block">
