@@ -14,7 +14,7 @@
     <br>
     you never seen before
   </p>
-  <a href="#" class="btn btn-get-started px-4 mt-4">Get Started</a>
+  <a href="#popular" class="btn btn-get-started px-4 mt-4">Get Started</a>
 </header>
 
 <!-- main content  -->
@@ -60,46 +60,19 @@
   <section class="section-popular-content" id="popularcontent">
     <div class="container">
       <div class="section-popular-travel row justify-content-center">
-        <div class="col-sm-6 col-md-4 col-lg-3">
-          <div class="card-travel text-center d-flex flex-column"
-            style="background-image: url('frontend/images/destination/popular-1.png');">
-            <div class="travel-country">INDONESIA</div>
-            <div class="travel-location">LABUAN BAJO</div>
-            <div class="travel-button mt-auto">
-              <a href="{{ route('details') }}" class="btn btn-travel-explore px-4">Explore</a>
+        @foreach ($items as $item)
+          <div class="col-sm-6 col-md-4 col-lg-3">
+            <div class="card-travel text-center d-flex flex-column"
+              style="background-image: 
+                url('{{ $item->gallery->count() ? Storage::url($item->gallery->first()->image) : '' }} ');">
+              <div class="travel-country">{{ $item->location }}</div>
+              <div class="travel-location">{{ $item->title }}</div>
+              <div class="travel-button mt-auto">
+                <a href="{{ route('details', $item->slug) }}" class="btn btn-travel-explore px-4">Explore</a>
+              </div>
             </div>
           </div>
-        </div>
-        <div class="col-sm-6 col-md-4 col-lg-3">
-          <div class="card-travel text-center d-flex flex-column"
-            style="background-image: url('frontend/images/destination/popular-2.png');">
-            <div class="travel-country">THAILAND</div>
-            <div class="travel-location">PHUKET</div>
-            <div class="travel-button mt-auto">
-              <a href="#" class="btn btn-travel-explore px-4">Explore</a>
-            </div>
-          </div>
-        </div>
-        <div class="col-sm-6 col-md-4 col-lg-3">
-          <div class="card-travel text-center d-flex flex-column"
-            style="background-image: url('frontend/images/destination/popular-3.png');">
-            <div class="travel-country">AUSTRALIA</div>
-            <div class="travel-location">SYDNEY</div>
-            <div class="travel-button mt-auto">
-              <a href="#" class="btn btn-travel-explore px-4">Explore</a>
-            </div>
-          </div>
-        </div>
-        <div class="col-sm-6 col-md-4 col-lg-3">
-          <div class="card-travel text-center d-flex flex-column"
-            style="background-image: url('frontend/images/destination/popular-4.png');">
-            <div class="travel-country">INDONESIA</div>
-            <div class="travel-location">BROMO</div>
-            <div class="travel-button mt-auto">
-              <a href="#" class="btn btn-travel-explore px-4">Explore</a>
-            </div>
-          </div>
-        </div>
+        @endforeach
       </div>
     </div>
   </section>
@@ -204,7 +177,7 @@
           <a href="#" class="btn btn-need-help px-4 mt-4 mx-1">
             I Need Help
           </a>
-          <a href="#" class="btn btn-explore-now px-4 mt-4 mx-1">
+          <a href="{{ route('register') }}" class="btn btn-explore-now px-4 mt-4 mx-1">
             Explore Now
           </a>
         </div>

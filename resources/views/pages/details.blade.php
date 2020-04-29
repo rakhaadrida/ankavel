@@ -24,83 +24,44 @@
       <div class="row">
         <div class="col-lg-8 pl-lg-0">
           <div class="card card-details">
-            <h1>LABUAN BAJO</h1>
-            <p>INDONESIA</p>
-            <div class="gallery">
-              <div class="xzoom-container">
-                <img 
-                  src="{{ url('frontend/images/bajo_details/bajo-1.png') }}" 
-                  alt="Details Bajo" 
-                  class="xzoom"
-                  id="xzoom-default"
-                  xoriginal="{{ url('frontend/images/bajo_details/bajo-1.png') }}"
-                />
-                <div class="xzoom-thumbs">
-                  <a href="{{ url('frontend/images/bajo_details/bajo-1.png') }}">
-                    <img 
-                      src="{{ url('frontend/images/bajo_details/bajo-2.png') }}" 
-                      alt="Details Bajo"
-                      class="xzoom-gallery"
-                      width="128"
-                      xpreview="{{ url('frontend/images/bajo_details/bajo-1.png') }}"
-                    />
-                  </a>
-                  <a href="{{ url('frontend/images/bajo_details/bajo-3.png') }}">
-                    <img 
-                      src="{{ url('frontend/images/bajo_details/bajo-3.png') }}" 
-                      alt="Details Bajo"
-                      class="xzoom-gallery"
-                      width="128"
-                      xpreview="{{ url('frontend/images/bajo_details/bajo-3.png') }}"
-                    />
-                  </a>
-                  <a href="{{ url('frontend/images/bajo_details/bajo-4.png') }}">
-                    <img 
-                      src="{{ url('frontend/images/bajo_details/bajo-4.png') }}" 
-                      alt="Details Bajo" 
-                      class="xzoom-gallery"
-                      width="128" 
-                      xpreview="{{ url('frontend/images/bajo_details/bajo-4.png') }}"
-                    />
-                  </a>
-                  <a href="{{ url('frontend/images/bajo_details/bajo-5.png') }}">
-                    <img 
-                      src="{{ url('frontend/images/bajo_details/bajo-5.png') }}" 
-                      alt="Details Bajo" 
-                      class="xzoom-gallery"
-                      width="128" 
-                      xpreview="{{ url('frontend/images/bajo_details/bajo-5.png') }}"
-                    />
-                  </a>
-                  <a href="{{ url('frontend/images/bajo_details/bajo-6.png') }}">
-                    <img 
-                      src="{{ url('frontend/images/bajo_details/bajo-6.png') }}" 
-                      alt="Details Bajo" 
-                      class="xzoom-gallery"
-                      width="128" 
-                      xpreview="{{ url('frontend/images/bajo_details/bajo-6.png') }}"
-                    />
-                  </a>
+            <h1>{{ $item->title }}</h1>
+            <p>{{ $item->location }}</p>
+            @if($item->gallery->count())
+              <div class="gallery">
+                <div class="xzoom-container">
+                  <img 
+                    src="{{ Storage::url($item->gallery->first()->image) }}" 
+                    alt="Details Bajo" 
+                    class="xzoom"
+                    id="xzoom-default"
+                    xoriginal="{{ Storage::url($item->gallery->first()->image) }}"
+                  />
+                  <div class="xzoom-thumbs">
+                    @foreach ($item->gallery as $g)
+                      <a href="{{ Storage::url($g->image) }}">
+                        <img 
+                          src="{{ Storage::url($g->image) }}" 
+                          alt="Details Bajo"
+                          class="xzoom-gallery"
+                          width="128"
+                          xpreview="{{ Storage::url($g->image) }}"
+                        />
+                      </a>
+                    @endforeach
+                  </div>
                 </div>
               </div>
-            </div>
+            @endif
             <h2>About this Place</h2>
             <p>
-              Once a small fishing village, Labuan Bajo (also spelled Labuhanbajo and Labuanbajo)
-              is now a tourist center as well as a centre of government for the surrounding region.
-              Facilities to support tourist activities are expanding quickly although the rapid rise in
-              the numbers of visitors is imposing some strains on the local environment.
-            </p>
-            <p>
-              Labuan Bajo is the gateway for trips across the nearby Komodo National Park to
-              Komodo Island and Rinca Island, both home to the famous Komodo dragons.
+              {!! $item->about !!}
             </p>
             <div class="features row"> 
               <div class="col-md-4">
                   <img src="{{ url('frontend/images/icons/ic_event.png') }}" alt="" class="features-image">
                   <div class="description">
                     <h3>Featured Events</h3>
-                    <p>Tari Kecak</p>
+                    <p>{{ $item->event }}</p>
                   </div>
               </div>
               <div class="col-md-4 border-left">
@@ -108,7 +69,7 @@
                   <img src="{{ url('frontend/images/icons/ic_language.png') }}" alt="" class="features-image">
                   <div class="description">
                     <h3>Language</h3>
-                    <p>Indonesia, English</p>
+                    <p>{{ $item->language }}</p>
                   </div>
                 </div>
               </div>
@@ -117,7 +78,7 @@
                   <img src="{{ url('frontend/images/icons/ic_foods.png') }}" alt="" class="features-image">
                   <div class="description">
                     <h3>Foods</h3>
-                    <p>Local, Western</p>
+                    <p>{{ $item->food }}</p>
                   </div>
                 </div>
               </div>
@@ -140,26 +101,37 @@
             <table class="trip-information">
               <tr>
                 <th width="50%">Date of Departure</th>
-                <td width=:50% class="text-right">Aug 20, 2020</td>
+                <td width=:50% class="text-right">
+                  {{ \Carbon\Carbon::create($item->departure_date)->format('F n, Y')}}
+                </td>
               </tr>
               <tr>
                 <th width="50%">Duration</th>
-                <td width=:50% class="text-right">5D 4N</td>
+                <td width=:50% class="text-right">{{ $item->duration }}</td>
               </tr>
               <tr>
                 <th width="50%">Type</th>
-                <td width=:50% class="text-right">Open Public</td>
+                <td width=:50% class="text-right">{{ $item->type }}</td>
               </tr>
               <tr>
                 <th width="50%">Price</th>
-                <td width=:50% class="text-right">$900 / Person</td>
+                <td width=:50% class="text-right">${{ $item->price }} / Person</td>
               </tr>
             </table>
           </div>
           <div class="join-container">
-            <a href="{{ route('checkout') }}" class="btn btn-block btn-join-now mt-5 py-2">
-              JOIN NOW
-            </a>
+            @auth
+              <form action="" method="post">
+                <button class="btn btn-block btn-join-now mt-5 py-2" type="submit">
+                  JOIN NOW
+                </button>
+              </form>
+            @endauth
+            @guest
+              <a href="{{ route('checkout') }}" class="btn btn-block btn-join-now mt-5 py-2">
+                JOIN NOW
+              </a>
+            @endguest
           </div>
         </div>
       </div>
