@@ -1,0 +1,12 @@
+<mjml>
+  <mj-body background-color="#DFDFDF" font-size="13px">
+    <mj-section background-color="#FFFFFF" padding-bottom="0px"
+      padding-top="0px" border-bottom="1px dashed #eee">
+      <mj-column width="100%">
+        <mj-image src="frontend/images/logo/logo_ankavel.png">
+
+        </mj-image>
+      </mj-column>
+    </mj-section>
+  </mj-body>
+</mjml>
